@@ -27,10 +27,12 @@ def normalizar_texto(texto):
 
 def conversar(mensagem, lista_mensagem=None):
     if lista_mensagem is None:
-        lista_mensagem = []
-
+        lista_mensagem = [{
+            "role": "system",
+            "content": "Você é um assistente que só responde com informações relacionadas à equipe de e-sports FURIA. Nunca fale sobre outros assuntos."
+        }]
     lista_mensagem.append({"role": "user", "content": mensagem})
-
+    
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=lista_mensagem
