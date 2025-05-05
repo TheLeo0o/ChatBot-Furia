@@ -4,9 +4,6 @@ import openai
 
 openai.api_key = "sua_api" #Tentei usar a API do OpenAI, mas acabou meu limite de créditos, então não consegui testar o código com a IA inteligente da openai, mas o código está pronto para ser testado.
 
-bot_furioso = ""
-chatid = ""
-
 print("ChatBot: Salve, torcedor(a) da FURIA! No que posso te ajudar?")
 time.sleep(2)
 def menu():
